@@ -8,21 +8,23 @@
   <link rel="stylesheet" href="dashboard.css" />
 </head>
 <body class="dashboard">
+  <!-- Main Title Header -->
   <div class="top-bar">
-  <div class="top-left">
-    <span id="claim-core">🪙 ...</span>
+    <h1 class="main-title">
+      <span class="ark">Ark</span> <span class="dashboard-label">Dashboard</span>
+    </h1>
   </div>
 
-  <div class="top-center">
-    <h1><span class="ark">Ark</span> <span class="dashboard-label">Dashboard</span></h1>
+  <!-- Sub-header for Claim Cores and Wallet -->
+  <div class="sub-header">
+    <div class="sub-left" id="claim-core">🪙 Claim Cores: ...</div>
+    <div class="sub-right">
+      <span class="version-pill">v3.3.6</span>
+      <span class="wallet-pill" id="wallet-address">Wallet: ...</span>
+    </div>
   </div>
 
-  <div class="top-right">
-    <span class="version-pill">v3.3.6</span>
-    <span class="wallet-pill" id="wallet-address">Wallet: ...</span>
-  </div>
-</div>
-
+  <!-- Dashboard Body -->
   <div class="level-overall card">
     <div class="level-info">
       <div>
@@ -40,16 +42,11 @@
 
   <h3 class="section-title glow-blue">⚡ Skill Levels</h3>
   <div class="skill-grid">
-    <div class="skill-card">🌱 <strong>Farming</strong><br/>Level 32<br/><span>45,600 / 52,000 XP</span>
-    </div>
-    <div class="skill-card">🧭 <strong>Exploring</strong><br/>Level 28<br/><span>38,200 / 45,000 XP</span>
-    </div>
-    <div class="skill-card">⛏️ <strong>Mining</strong><br/>Level 41<br/><span>67,300 / 72,000 XP</span>
-    </div>
-    <div class="skill-card">⚔️ <strong>Combat</strong><br/>Level 55<br/><span>89,400 / 95,000 XP</span>
-    </div>
-    <div class="skill-card">🔧 <strong>Crafting</strong><br/>Level 24<br/><span>22,100 / 28,000 XP</span>
-    </div>
+    <div class="skill-card">🌱 <strong>Farming</strong><br/>Level 32<br/><span>45,600 / 52,000 XP</span></div>
+    <div class="skill-card">🧭 <strong>Exploring</strong><br/>Level 28<br/><span>38,200 / 45,000 XP</span></div>
+    <div class="skill-card">⛏️ <strong>Mining</strong><br/>Level 41<br/><span>67,300 / 72,000 XP</span></div>
+    <div class="skill-card">⚔️ <strong>Combat</strong><br/>Level 55<br/><span>89,400 / 95,000 XP</span></div>
+    <div class="skill-card">🔧 <strong>Crafting</strong><br/>Level 24<br/><span>22,100 / 28,000 XP</span></div>
   </div>
 
   <div class="quest-header">
