@@ -5,7 +5,6 @@
   --accent1: #00ffff;
   --accent2: #9c00ff;
   --font: 'Segoe UI', sans-serif;
-  --neon-blue: #00faff;
 }
 
 body {
@@ -14,58 +13,47 @@ body {
   font-family: var(--font);
   margin: 0;
   padding: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Top Bar: Centered Title Only */
-.top-bar {
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 15px var(--accent2);
-  padding: 1rem 0;
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: var(--card-bg);
+  padding: 2rem 3rem;
+  border-radius: 16px;
   text-align: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+  box-shadow: 0 0 30px var(--accent1);
 }
 
-.main-title {
-  font-size: 2rem;
-  margin: 0;
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 0; /* tightened spacing */
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin: 0.25rem 0 0;
   background: linear-gradient(to right, var(--accent1), var(--accent2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 10px var(--accent1);
 }
 
-/* Sub-header for wallet and claim core */
-.sub-header {
-  margin-top: 4.5rem;
-  padding: 0.5rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.025);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+.version-tag {
+  font-size: 0.85rem;
+  color: var(--accent2);
+  margin: 0.1rem 0 0.5rem;
+  opacity: 0.75;
 }
 
-.sub-left,
-.sub-right {
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.wallet-pill,
-.version-pill {
-  background: var(--card-bg);
-  padding: 0.25rem 0.75rem;
-  border-radius: 8px;
-  color: var(--text);
-}
-
-/* Generic Elements */
 button {
   background: linear-gradient(to right, var(--accent1), var(--accent2));
   color: var(--bg);
@@ -83,20 +71,22 @@ button:hover {
   box-shadow: 0 0 12px var(--accent2);
 }
 
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  color: var(--neon-purple);
+  text-shadow: 0 0 10px var(--neon-purple);
+}
+
 p {
   color: var(--neon-blue);
   text-shadow: 0 0 5px var(--neon-blue);
-}
-
-@media (max-width: 768px) {
-  .sub-left,
-  .sub-right {
-    font-size: 0.85rem;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .main-title {
-    font-size: 1.4rem;
-  }
 }
