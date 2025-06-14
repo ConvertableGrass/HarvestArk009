@@ -9,7 +9,7 @@
 </head>
 <body class="farm-page">
 
-  <!-- Top Navigation (copied exactly from dashboard.html) -->
+  <!-- Top Bar (Identical to Dashboard & Wallet-Connected) -->
   <div class="top-bar">
     <div class="claim-cores">
       <span id="claim-core">🪙 ...</span>
@@ -88,8 +88,39 @@
     <button id="harvest-button">🔪 Harvest Ripe</button>
   </div>
 
-  <!-- Scripts -->
+  <!-- Wallet Connection + Page Logic -->
   <script src="wallet-connect.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const walletAddress = localStorage.getItem('walletAddress');
+
+      if (!walletAddress) {
+        alert('No wallet connected. Redirecting to login.');
+        window.location.href = 'index.html';
+        return;
+      }
+
+      // Simulated player data (replace with real DB later)
+      const playerDataMap = {
+        '0x742d…8f3a': {
+          name: 'Starlord',
+          claimCores: 12584,
+          farmingLevel: 32,
+        },
+      };
+
+      const player = playerDataMap[walletAddress] || {
+        name: 'New Explorer',
+        claimCores: 0,
+        farmingLevel: 1,
+      };
+
+      document.getElementById('wallet-address').textContent = walletAddress;
+      document.getElementById('claim-core').textContent = player.claimCores.toLocaleString();
+      const farmLevelEl = document.getElementById('farming-level');
+      if (farmLevelEl) farmLevelEl.textContent = player.farmingLevel;
+    });
+  </script>
   <script src="farm.js"></script>
 </body>
 </html>
