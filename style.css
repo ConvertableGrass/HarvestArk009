@@ -70,3 +70,22 @@ button:hover {
   transform: scale(1.05);
   box-shadow: 0 0 12px var(--accent2);
 }
+
+.top-bar {
+  background-color: #000;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 255, 255, 0.2);
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-logo {
+  height: 60px;
+  width: auto;
+  filter: drop-shadow(0 0 6px #00faff);
+}
