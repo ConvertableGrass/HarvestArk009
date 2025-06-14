@@ -47,23 +47,20 @@ document.addEventListener('DOMContentLoaded', () => {
     skillCards[4].innerHTML = `🔧 <strong>Crafting</strong><br/>Level ${player.craftingLevel}<br/><span>XP TBD</span>`;
   }
 
-  // Quest tab switching
-const levelTab = document.querySelector('.tab:nth-child(1)');
-const achievementTab = document.querySelector('.tab:nth-child(2)');
-const levelQuests = document.getElementById('level-quests');
-const achievementQuests = document.getElementById('achievement-quests');
+  // 🧭 Quest Tab Toggle Behavior
+  document.querySelectorAll('.quest-tabs .tab').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelector('.quest-tabs .tab.active').classList.remove('active');
+      button.classList.add('active');
 
-levelTab.addEventListener('click', () => {
-  levelTab.classList.add('active');
-  achievementTab.classList.remove('active');
-  levelQuests.classList.remove('hidden');
-  achievementQuests.classList.add('hidden');
+      const isLevel = button.textContent.includes('Level');
+      document.getElementById('level-quests').classList.toggle('hidden', !isLevel);
+      document.getElementById('achievement-quests').classList.toggle('hidden', isLevel);
+    });
+  });
 });
 
-achievementTab.addEventListener('click', () => {
-  achievementTab.classList.add('active');
-  levelTab.classList.remove('active');
-  achievementQuests.classList.remove('hidden');
-  levelQuests.classList.add('hidden');
+document.getElementById('menu-toggle').addEventListener('click', () => {
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.toggle('open');
 });
-
