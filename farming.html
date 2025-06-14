@@ -9,16 +9,20 @@
 </head>
 <body class="farm-page">
 
-  <!-- Top Navigation -->
+  <!-- Top Navigation (copied exactly from dashboard.html) -->
   <div class="top-bar">
-    <a href="dashboard.html" class="back-button">← Dashboard</a>
-    <div class="farm-meta">
+    <div class="claim-cores">
+      <span id="claim-core">🪙 ...</span>
+    </div>
+    <div></div>
+    <div class="top-meta">
       <span class="version-pill">v3.3.6</span>
       <span class="wallet-pill" id="wallet-address">Wallet: ...</span>
-      <span class="core-pill">🪙 <span id="claim-core">...</span></span>
-      <span class="farm-level">🌱 Farming Lv. <span id="farming-level">1</span></span>
     </div>
   </div>
+
+  <!-- Optional Back Link -->
+  <a href="dashboard.html" class="back-button">← Back to Dashboard</a>
 
   <!-- Equipment Bar -->
   <div class="equipment-bar">
@@ -84,6 +88,7 @@
     <button id="harvest-button">🔪 Harvest Ripe</button>
   </div>
 
+  <!-- Scripts -->
   <script src="wallet-connect.js"></script>
   <script src="farm.js"></script>
 </body>
