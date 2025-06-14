@@ -1,0 +1,98 @@
+/* Extend dashboard theme */
+body.farm-page {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+}
+
+.back-button {
+  display: inline-block;
+  margin: 1rem 2rem;
+  color: var(--accent1);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+.back-button:hover {
+  color: var(--accent2);
+}
+
+.equipment-bar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.equip-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--accent2);
+}
+
+.equip-slot .slot {
+  width: 60px;
+  height: 60px;
+  border: 2px dashed var(--accent1);
+  border-radius: 12px;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background-color: var(--card-bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.farm-grid {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1rem;
+  max-width: 90vw;
+  margin: 0 auto 3rem;
+}
+
+.plot-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.farm-plot {
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--accent1);
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  transition: box-shadow 0.2s;
+}
+.farm-plot:hover {
+  box-shadow: 0 0 8px var(--accent1);
+  cursor: pointer;
+}
+
+.farm-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.farm-actions button {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, var(--accent1), var(--accent2));
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.farm-actions button:hover {
+  transform: scale(1.05);
+}
