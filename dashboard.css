@@ -306,7 +306,7 @@ h1 {
 /* Menu Icon */
 .menu-icon {
   position: fixed;
-  top: 1rem;
+  bottom: 1rem;
   left: 1rem;
   font-size: 2rem;
   color: var(--accent1);
