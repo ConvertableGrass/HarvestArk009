@@ -25,11 +25,30 @@ body {
 /* =============== TOP BAR =============== */
 .top-bar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-  gap: 1rem;
+  height: 60px;
+  width: 100%;
+  background: var(--card-bg);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.dashboard-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--accent1);
+  font-family: var(--font);
+  margin: 0;
 }
 
 h1 {
