@@ -309,14 +309,20 @@ h1 {
   bottom: 1rem;
   left: 1rem;
   font-size: 2rem;
-  color: var(--accent1);
+  color: #000;
+  background: linear-gradient(to right, var(--accent1), var(--accent2));
+  padding: 0.5rem 0.8rem;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0 0 10px var(--accent1), 0 0 20px var(--accent2);
   cursor: pointer;
   z-index: 1001;
-  transition: color 0.3s;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .menu-icon:hover {
-  color: var(--accent2);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--accent2);
 }
 
 /* Sidebar Navigation */
