@@ -173,7 +173,7 @@ button:hover {
 }
 
 .dashboard-logo {
-  max-height: 48px;
+  max-height: 15px;
   height: auto;
   width: auto;
   object-fit: contain;
