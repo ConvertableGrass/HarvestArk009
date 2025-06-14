@@ -301,3 +301,21 @@ h1 {
   margin: 1rem;
   border-radius: 8px;
 }
+
+.top-bar {
+  width: 100%;
+  background: var(--card-bg);
+  padding: 10px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.dashboard-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--accent1);
+  font-family: var(--font);
+}
