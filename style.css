@@ -84,8 +84,98 @@ button:hover {
   align-items: center;
 }
 
+:root {
+  --bg: #000;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --text: #fff;
+  --accent1: #00ffff;
+  --accent2: #9c00ff;
+  --font: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: var(--card-bg);
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 30px var(--accent1);
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 0; /* tightened spacing */
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin: 0.25rem 0 0;
+  background: linear-gradient(to right, var(--accent1), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.version-tag {
+  font-size: 0.85rem;
+  color: var(--accent2);
+  margin: 0.1rem 0 0.5rem;
+  opacity: 0.75;
+}
+
+button {
+  background: linear-gradient(to right, var(--accent1), var(--accent2));
+  color: var(--bg);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 1rem;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px var(--accent2);
+}
+
+.top-bar {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 8px rgba(0, 255, 255, 0.2);
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
 .dashboard-logo {
-  height: 60px;
+  max-height: 48px;
+  height: auto;
   width: auto;
+  object-fit: contain;
   filter: drop-shadow(0 0 6px #00faff);
 }
