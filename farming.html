@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hydroponic Farm – Harvest Ark</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="farm.css" />
+</head>
+<body class="farm-page">
+
+  <!-- Top Navigation -->
+  <div class="top-bar">
+    <a href="dashboard.html" class="back-button">← Dashboard</a>
+    <div class="farm-meta">
+      <span class="version-pill">v3.3.6</span>
+      <span class="wallet-pill" id="wallet-address">Wallet: ...</span>
+      <span class="core-pill">🪙 <span id="claim-core">...</span></span>
+      <span class="farm-level">🌱 Farming Lv. <span id="farming-level">1</span></span>
+    </div>
+  </div>
+
+  <!-- Equipment Bar -->
+  <div class="equipment-bar">
+    <div class="equip-slot seed-slot">
+      <label>Seed</label>
+      <div class="slot" id="seed-slot">+</div>
+    </div>
+    <div class="equip-slot water-slot">
+      <label>Water</label>
+      <div class="slot" id="water-slot">💧</div>
+    </div>
+    <div class="equip-slot light-slot">
+      <label>Light</label>
+      <div class="slot" id="light-slot">💡</div>
+    </div>
+  </div>
+
+  <!-- Farm Grid -->
+  <div class="farm-grid">
+    <!-- 5x5 Plots -->
+    <div class="plot-row">
+      <div class="farm-plot" data-x="0" data-y="0"></div>
+      <div class="farm-plot" data-x="1" data-y="0"></div>
+      <div class="farm-plot" data-x="2" data-y="0"></div>
+      <div class="farm-plot" data-x="3" data-y="0"></div>
+      <div class="farm-plot" data-x="4" data-y="0"></div>
+    </div>
+    <div class="plot-row">
+      <div class="farm-plot" data-x="0" data-y="1"></div>
+      <div class="farm-plot" data-x="1" data-y="1"></div>
+      <div class="farm-plot" data-x="2" data-y="1"></div>
+      <div class="farm-plot" data-x="3" data-y="1"></div>
+      <div class="farm-plot" data-x="4" data-y="1"></div>
+    </div>
+    <div class="plot-row">
+      <div class="farm-plot" data-x="0" data-y="2"></div>
+      <div class="farm-plot" data-x="1" data-y="2"></div>
+      <div class="farm-plot" data-x="2" data-y="2"></div>
+      <div class="farm-plot" data-x="3" data-y="2"></div>
+      <div class="farm-plot" data-x="4" data-y="2"></div>
+    </div>
+    <div class="plot-row">
+      <div class="farm-plot" data-x="0" data-y="3"></div>
+      <div class="farm-plot" data-x="1" data-y="3"></div>
+      <div class="farm-plot" data-x="2" data-y="3"></div>
+      <div class="farm-plot" data-x="3" data-y="3"></div>
+      <div class="farm-plot" data-x="4" data-y="3"></div>
+    </div>
+    <div class="plot-row">
+      <div class="farm-plot" data-x="0" data-y="4"></div>
+      <div class="farm-plot" data-x="1" data-y="4"></div>
+      <div class="farm-plot" data-x="2" data-y="4"></div>
+      <div class="farm-plot" data-x="3" data-y="4"></div>
+      <div class="farm-plot" data-x="4" data-y="4"></div>
+    </div>
+  </div>
+
+  <!-- Action Bar -->
+  <div class="farm-actions">
+    <button id="plant-button">🌱 Plant</button>
+    <button id="water-button">💧 Water All</button>
+    <button id="light-button">💡 Toggle Lights</button>
+    <button id="harvest-button">🔪 Harvest Ripe</button>
+  </div>
+
+  <script src="wallet-connect.js"></script>
+  <script src="farm.js"></script>
+</body>
+</html>
